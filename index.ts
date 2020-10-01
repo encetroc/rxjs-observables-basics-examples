@@ -1,4 +1,4 @@
-import { EMPTY, fromEvent, interval, NEVER, of, throwError, timer } from 'rxjs';
+import { EMPTY, from, fromEvent, interval, NEVER, of, throwError, timer } from 'rxjs';
 import { filter, take } from 'rxjs/operators';
 
 // simple observable
@@ -94,3 +94,17 @@ btnStart_timer.addEventListener('click', () => {
     sub2.unsubscribe()
   })
 });
+
+//creating observables using from()
+const btnStart_from = document.getElementById('btnStart_from');
+const result_from_array = document.getElementById('result_from_array');
+const result_from_promise = document.getElementById('result_from_promise');
+
+btnStart_from.addEventListener('click', () => {
+  const arr = [1, 2, 3]
+  const p = new Promise(resolve => setTimeout(() => resolve(42), 2000));
+
+  from(arr).subscribe(e => result_from_array.textContent = e.toString())
+  from(p).subscribe(e => result_from_promise.textContent = e.toString())
+})
+

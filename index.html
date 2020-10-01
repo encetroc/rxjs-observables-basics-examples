@@ -6,6 +6,7 @@
 <a href="#creating-subscriptions">Creating Subscriptions</a><br>
 <a href="#observable-dom-events">Creating observables from DOM events</a><br>
 <a href="#observable-dom-events">Creating observables with timer</a><br>
+<a href="#observable-from">Creating observables using from()</a><br>
 <hr>
 
 <h3 id ="simple-observable">Simple observable</h3>
@@ -44,3 +45,10 @@
 <br>
 <b>timer using a date: </b><span id="result_timer_date"></span><br>
 <b>normal timer: </b><span id="result_timer_normal"></span>
+<hr>
+
+<h3 id="observable-from" >Creating observables using from()</h3>
+<p>array observable is gonna resolve instantly, but promise observable is gonna take 2 seconds to resolve</p>
+<button id="btnStart_from"> Start </button><br>
+<b>observable from array: </b><span id="result_from_array"></span><br>
+<b>observable from promise: </b><span id="result_from_promise"></span>
