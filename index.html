@@ -1,0 +1,46 @@
+<script src="./index.ts"></script>
+
+<h2>Index</h2>
+<a href="#simple-observable">Simple observable</a><br>
+<a href="#observable-of">Creating observables using of()</a><br>
+<a href="#creating-subscriptions">Creating Subscriptions</a><br>
+<a href="#observable-dom-events">Creating observables from DOM events</a><br>
+<a href="#observable-dom-events">Creating observables with timer</a><br>
+<hr>
+
+<h3 id ="simple-observable">Simple observable</h3>
+<p>emits and incements a value every 1 second starting from 0</p>
+<button id="btnStart"> Start </button>
+<button id="btnStop"> Stop </button>
+<span id="result"></span>
+<hr>
+
+<h3 id="observable-of">Creating observables using of()</h3>
+<p>click on start to emit all value of the observable at once, even tho one value is shown but all previous values were shown instantly just before the last one, check console for more</p>
+<button id="btnStart_of"> Start </button>
+<span id="result_of"></span>
+<hr>
+
+<h3 id="creating-subscriptions">Creating Subscriptions</h3>
+<p>this example uses next, error and complete callback function inside an observer, you can change the obsevable stream and choose one of the ones I created (data$, empty$, never$ ...) or create your own </p>
+<button id="btnStart_subscription"> Start </button>
+<span id="result_subscription"></span>
+<hr>
+
+<h3 id="observable-dom-events">Creating observables from DOM events</h3>
+<p> <b>mouse click event: </b> click one of the buttons below to see his text content displayed</p>
+<button id="btnStart_fromEvent"> Start </button>
+<button id="btnOther_fromEvent"> Other </button>
+<span id="result_fromEvent"></span>
+<br>
+<p> <b>mouse move event: </b> Whenever you move you mouse inside the canvas below, a 2x2 rectangle is gonna be drawn</p>
+<canvas id="canvas" width="400" height="200" style="background-color: lightskyblue;"></canvas>
+<hr>
+
+<h3 id="observable-timer">Creating observables with timer</h3>
+<p>you can either use a date object to start your observable using timer or the number of milisecond passed befor you want to start</p>
+<button id="btnStart_timer"> Start </button>
+<button id="btnStop_timer"> Stop </button>
+<br>
+<b>timer using a date: </b><span id="result_timer_date"></span><br>
+<b>normal timer: </b><span id="result_timer_normal"></span>
