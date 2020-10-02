@@ -7,6 +7,10 @@
 <a href="#observable-dom-events">Creating observables from DOM events</a><br>
 <a href="#observable-dom-events">Creating observables with timer</a><br>
 <a href="#observable-from">Creating observables using from()</a><br>
+<a href="#using-ajax">Using Ajax</a><br>
+<a href="#custom-observable">Custom-observable</a><br>
+<a href="#subject">Subject</a><br>
+<a href="#hot-vs-cold">Cold vs hot observables</a><br>
 <hr>
 
 <h3 id ="simple-observable">Simple observable</h3>
@@ -52,3 +56,39 @@
 <button id="btnStart_from"> Start </button><br>
 <b>observable from array: </b><span id="result_from_array"></span><br>
 <b>observable from promise: </b><span id="result_from_promise"></span>
+<hr>
+
+<h3 id="using-ajax">Using Ajax</h3>
+<p>click the button below to fetch and display data from an API</p>
+<button id="btnFetch_ajax">Fetch</button>
+<span id="result_ajax"></span>
+<hr>
+
+<h3 id="custom-observable" >Creating suctom observable</h3>
+<p>click start to launch the custom observable</p>
+<button id="btnStart_custom">Start</button>
+<button id="btnStop_custom">Stop</button>
+<span id="result_custom"></span>
+<hr>
+
+<h3 id="subject">Subject</h3>
+<p>there are three types of subjects, each one has its own Behaviour:</p>
+<li>replay subject re-emits all the values of the subject or a portion of them</li>
+<li>behaviour subject emits all upcoming and the last previous value<values> </values></li>
+<li>normal subject emit just upcoming values</li>
+<br>
+<button id="btnStart_subject">Start</button><br>
+<b>Replay subject: </b><span id="result_replay_subject"></span><br>
+<b>Behaviour subject: </b><span id="result_behaviour_subject"></span><br>
+<b>Normal subject: </b><span id="result_subject"></span>
+<hr>
+
+<h3 id="hot-vs-cold">Cold vs hot observables</h3>
+<p>cold observables start emiting only if you subscribe to it, and stops emiting when you unsubscribe.</p>
+<p>hot observables are always emiting regardless of if you are subscribed or not. beware that a hot observable continues emitting thoughout its life anf if want to stop it you will have to do so manually</p>
+<button id="btnStart_cold">Start cold</button>
+<button id="btnStop_cold">Stop cold</button>
+<span id="result_cold"></span><br>
+<button id="btnStart_hot">Start hot</button>
+<button id="btnStop_hot">Stop hot</button>
+<span id="result_hot"></span>
